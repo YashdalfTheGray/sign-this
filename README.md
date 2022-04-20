@@ -31,3 +31,9 @@ If you want to disable the passphrase prompt, you can use the `--batch` option a
 ```
 gpg --detach-sign --batch --passphrase <passphrase> --output <signature_file> <file_to_sign>
 ```
+
+## Verify something
+
+```
+gpg --verify <signature_file> <file_to_verify>
+```
