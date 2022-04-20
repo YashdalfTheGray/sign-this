@@ -34,6 +34,8 @@ gpg --detach-sign --batch --passphrase <passphrase> --output <signature_file> <f
 
 ## Verify something
 
+For validating, you should have access to the public key that the file was signed with. So you'll have to import the public key into your keyring. 
+
 ```
 gpg --verify <signature_file> <file_to_verify>
 ```
