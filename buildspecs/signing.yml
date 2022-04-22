@@ -18,4 +18,4 @@ phases:
       # remove the private key file because we don't want it to be packaged with the artifacts
       - rm private.gpg
       # sign all the artifacts found in the current directory, output each file name
-      - for filename in *; do echo "Found file $filename" && gpg --detach-sign --batch --passphrase $PASSPHRASE --armor --output "$filename.asc" $filename && echo "Signed file $filename"; done
+      - for filename in files/*; do echo "Found file $filename" && gpg --detach-sign --batch --passphrase $PASSPHRASE --armor --output "$filename.asc" $filename && echo "Signed file $filename"; done
