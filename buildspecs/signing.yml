@@ -19,3 +19,7 @@ phases:
       - rm private.gpg
       # sign all the artifacts found in the current directory, output each file name
       - for filename in files/*; do echo "Found file $filename" && gpg --detach-sign --batch --passphrase $PASSPHRASE --armor --output "$filename.asc" $filename && echo "Signed file $filename"; done
+artifacts:
+  files:
+    - files/*
+  name: $CODEBUILD_RESOLVED_SOURCE_VERSION/files
