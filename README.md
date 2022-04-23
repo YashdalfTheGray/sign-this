@@ -6,9 +6,11 @@ Playing around with gpg signing, because why not.
 
 ```
 gpg --full-generate-key
-gpg --output public.pgp --armor --output <filename> --export <email>
-gpg --output private.pgp --armor --output <filename> --export-secret-key <email>
+gpg --output public.pgp --armor --export <email>
+gpg --output private.pgp --armor --export-secret-key <email>
 ```
+
+Output will be in the current directory, feel free to change the `--output` to customize where it goes. 
 
 ## Importing somewhere else
 
